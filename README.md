@@ -17,25 +17,17 @@
 
 ## 安装
 
-从 npm（如已发布）：
+**方式一：插件市场（推荐）**
 
-```bash
-dsh plugin add dsh-token-clock
-```
+插件收录到 DSH 插件市场后，在 Harness 里打开「插件市场」搜索 `dsh-token-clock` 即可一键安装。
 
-从 GitHub Release 的 tarball：
+**方式二：本地目录 / Release 包**
 
-```bash
-dsh plugin add https://github.com/<owner>/dsh-token-clock/releases/latest/download/dsh-token-clock.tgz
-```
+1. 下载 [v1.0.0 的 tarball](https://github.com/oxygenforce/dsh-token-clock/releases/download/v1.0.0/dsh-token-clock-1.0.0.tgz) 并解压（内部是 `package/` 目录）；
+2. 在 Harness 的插件管理页选择「从本地目录安装」，指向解压出来的 `package/` 目录；
+3. 安装后刷新一次 Web 页面，读数即刻出现，不需要重启 `dsh web`。
 
-从本地目录（开发时）：
-
-```bash
-dsh plugin add "C:\path\to\dsh-token-clock"
-```
-
-或在 Harness 的插件管理页用“从本地目录安装”指向本目录。安装后刷新一次 Web 页面即可看到读数，不需要重启 `dsh web`。
+> 本包同时带有 `dsh.bundle.patch` 与 `cordis.patch.yml`，两条安装路径都会按 bundle 正常启用。
 
 ## 兼容性
 
