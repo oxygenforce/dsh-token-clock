@@ -1,0 +1,54 @@
+{
+  "name": "dsh-token-clock",
+  "version": "1.0.0",
+  "description": "在每条回答下方显示本轮 Token 用量、回答耗时与会话累计 Token / Per-reply token usage, answer duration, and session total for DeepSeek Harness",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "token",
+    "usage",
+    "duration",
+    "status",
+    "ui"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "assets/preview.png"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-chat"
+      ]
+    }
+  },
+  "author": "oxygenforce",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oxygenforce/dsh-token-clock.git"
+  },
+  "homepage": "https://github.com/oxygenforce/dsh-token-clock",
+  "bugs": {
+    "url": "https://github.com/oxygenforce/dsh-token-clock/issues"
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2"
+  }
+}

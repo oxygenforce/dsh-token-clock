@@ -1,0 +1,9 @@
+# 提交到 https://github.com/awesome-dsh-plugin/awesome-dsh-plugin 的文件内容
+# 文件路径：data/plugins/<owner>__dsh-token-clock.yml（owner 换成你的 GitHub 用户名）
+url: https://github.com/oxygenforce/dsh-token-clock
+name: oxygenforce/dsh-token-clock
+category: usage
+description:
+  en: Shows per-reply token usage, answer duration, and running session total under each reply.
+  zh: 在每条回答下方显示本轮 Token 用量、回答耗时与会话累计 Token。
+tarball: https://github.com/oxygenforce/dsh-token-clock/releases/download/v1.0.0/dsh-token-clock-1.0.0.tgz

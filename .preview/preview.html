@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>dsh-token-clock preview v2</title>
+<style>
+  :root {
+    --dsw-alias-label-primary: #16161a;
+    --dsw-alias-label-secondary: #5f5f6b;
+    --dsw-alias-label-tertiary: #8d8d99;
+    --dsw-alias-bg-base: #ffffff;
+    --dsw-alias-border-l1: #e7e7ec;
+    --dsw-alias-border-l2: #d3d3da;
+    --dsh-content-font-size-secondary: 13px;
+    --dsh-content-font-delta: 0px;
+  }
+  .dark {
+    --dsw-alias-label-primary: #ececf1;
+    --dsw-alias-label-secondary: #a9a9b4;
+    --dsw-alias-label-tertiary: #7c7c88;
+    --dsw-alias-bg-base: #17171a;
+    --dsw-alias-border-l1: #2c2c33;
+    --dsw-alias-border-l2: #3d3d46;
+  }
+  html, body { margin: 0; }
+  body {
+    background: var(--dsw-alias-bg-base);
+    color: var(--dsw-alias-label-primary);
+    font-family: "Segoe UI", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+  }
+  .panel { padding: 24px 30px 26px; }
+  .panel + .panel { border-top: 1px solid var(--dsw-alias-border-l1); }
+  .stage { max-width: 900px; }
+  .answer { margin: 0; line-height: 1.78; }
+
+  /* 模拟官方 turn-tail 根：flex column, gap 16px */
+  .turn-tail { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+  /* 模拟官方动作行：height 28px, gap 8px, margin-top 4px, margin-left -6px */
+  .actions {
+    display: flex; align-items: center; gap: 8px;
+    height: 28px; margin-top: 4px; margin-left: -6px;
+  }
+  .icon-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; padding: 6px; border: 0; border-radius: 8px;
+    background: transparent; color: var(--dsw-alias-label-tertiary);
+  }
+  .end-info {
+    display: inline-flex; align-items: center; gap: 8px; margin-left: 8px;
+    color: var(--dsw-alias-label-tertiary);
+  }
+  .time-end {
+    font-size: calc(var(--dsh-content-font-size-secondary, 13px) - 1px);
+    line-height: calc(24px + var(--dsh-content-font-delta, 0px));
+    white-space: nowrap;
+  }
+
+  /* ── 插件样式（与 lib/client.js 的 STYLE_CSS 一致）────────────────── */
+  .dtc-rule {
+    margin-top: 4px;
+    width: 100%;
+    height: 1px;
+    border-radius: 1px;
+    background: var(--dsw-alias-border-l2);
+    opacity: 0.72;
+  }
+  .dtc-metrics {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 7px;
+    font-size: calc(var(--dsh-content-font-size-secondary, 13px) + 1.5px);
+    line-height: calc(20px + var(--dsh-content-font-delta, 0px));
+    font-weight: 500;
+    color: var(--dsw-alias-label-secondary);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    user-select: none;
+    cursor: default;
+    letter-spacing: 0.01em;
+  }
+  .dtc-metrics:hover { color: var(--dsw-alias-label-primary); }
+  .dtc-part { display: inline-flex; align-items: baseline; gap: 3px; }
+  .dtc-sep { opacity: 0.4; }
+  .dtc-session { opacity: 0.86; }
+</style>
+</head>
+<body>
+  <section class="panel">
+    <div class="stage">
+      <p class="answer">已通过语法检查，README.md 也同步了样式说明。刷新后如果觉得横条再长/再短一点、或者字还想再深一档，告诉我具体感受，我继续微调。</p>
+      <div class="turn-tail" data-turn-tail="3">
+        <div class="dtc-rule" role="separator" aria-hidden="true"></div>
+        <div class="actions" data-clock="end">
+          <span class="icon-btn">⧉</span>
+          <span class="icon-btn">♡</span>
+          <span class="icon-btn">♡</span>
+          <span class="icon-btn">⇥</span>
+          <span class="icon-btn">⤴</span>
+          <span class="end-info">
+            <span class="time-end">20:10</span>
+            <span class="dtc-metrics">
+              <span class="dtc-part">1.1M tok</span>
+              <span class="dtc-sep">·</span>
+              <span class="dtc-part">1分02秒</span>
+              <span class="dtc-sep">·</span>
+              <span class="dtc-part dtc-session">共 26.9M tok</span>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel dark">
+    <div class="stage">
+      <p class="answer">已通过语法检查，README.md 也同步了样式说明。刷新后如果觉得横条再长/再短一点、或者字还想再深一档，告诉我具体感受，我继续微调。</p>
+      <div class="turn-tail" data-turn-tail="3">
+        <div class="dtc-rule" role="separator" aria-hidden="true"></div>
+        <div class="actions" data-clock="end">
+          <span class="icon-btn">⧉</span>
+          <span class="icon-btn">♡</span>
+          <span class="icon-btn">♡</span>
+          <span class="icon-btn">⇥</span>
+          <span class="icon-btn">⤴</span>
+          <span class="end-info">
+            <span class="time-end">20:10</span>
+            <span class="dtc-metrics">
+              <span class="dtc-part">1.1M tok</span>
+              <span class="dtc-sep">·</span>
+              <span class="dtc-part">1分02秒</span>
+              <span class="dtc-sep">·</span>
+              <span class="dtc-part dtc-session">共 26.9M tok</span>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
