@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>dsh-token-clock preview v2</title>
+<title>dsh-token-clock preview</title>
 <style>
   :root {
     --dsw-alias-label-primary: #16161a;
@@ -14,14 +14,6 @@
     --dsh-content-font-size-secondary: 13px;
     --dsh-content-font-delta: 0px;
   }
-  .dark {
-    --dsw-alias-label-primary: #ececf1;
-    --dsw-alias-label-secondary: #a9a9b4;
-    --dsw-alias-label-tertiary: #7c7c88;
-    --dsw-alias-bg-base: #17171a;
-    --dsw-alias-border-l1: #2c2c33;
-    --dsw-alias-border-l2: #3d3d46;
-  }
   html, body { margin: 0; }
   body {
     background: var(--dsw-alias-bg-base);
@@ -29,10 +21,10 @@
     font-family: "Segoe UI", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
     font-size: 14px;
   }
-  .panel { padding: 24px 30px 26px; }
-  .panel + .panel { border-top: 1px solid var(--dsw-alias-border-l1); }
+  .panel { padding: 26px 30px 28px; }
   .stage { max-width: 900px; }
-  .answer { margin: 0; line-height: 1.78; }
+  /* 空对话：只留正文占位高度，不写字 */
+  .answer { height: 26px; }
 
   /* 模拟官方 turn-tail 根：flex column, gap 16px */
   .turn-tail { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
@@ -89,33 +81,7 @@
 <body>
   <section class="panel">
     <div class="stage">
-      <p class="answer">已通过语法检查，README.md 也同步了样式说明。刷新后如果觉得横条再长/再短一点、或者字还想再深一档，告诉我具体感受，我继续微调。</p>
-      <div class="turn-tail" data-turn-tail="3">
-        <div class="dtc-rule" role="separator" aria-hidden="true"></div>
-        <div class="actions" data-clock="end">
-          <span class="icon-btn">⧉</span>
-          <span class="icon-btn">♡</span>
-          <span class="icon-btn">♡</span>
-          <span class="icon-btn">⇥</span>
-          <span class="icon-btn">⤴</span>
-          <span class="end-info">
-            <span class="time-end">20:10</span>
-            <span class="dtc-metrics">
-              <span class="dtc-part">1.1M tok</span>
-              <span class="dtc-sep">·</span>
-              <span class="dtc-part">1分02秒</span>
-              <span class="dtc-sep">·</span>
-              <span class="dtc-part dtc-session">共 26.9M tok</span>
-            </span>
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="panel dark">
-    <div class="stage">
-      <p class="answer">已通过语法检查，README.md 也同步了样式说明。刷新后如果觉得横条再长/再短一点、或者字还想再深一档，告诉我具体感受，我继续微调。</p>
+      <div class="answer"></div>
       <div class="turn-tail" data-turn-tail="3">
         <div class="dtc-rule" role="separator" aria-hidden="true"></div>
         <div class="actions" data-clock="end">
