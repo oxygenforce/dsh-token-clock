@@ -1,5 +1,5 @@
 {
-  "name": "dsh-token-clock",
+  "name": "dsh-token-usage-badge",
   "version": "1.0.0",
   "description": "在每条回答下方显示本轮 Token 用量、回答耗时与会话累计 Token / Per-reply token usage, answer duration, and session total for DeepSeek Harness",
   "license": "MIT",
@@ -42,11 +42,11 @@
   "author": "oxygenforce",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oxygenforce/dsh-token-clock.git"
+    "url": "git+https://github.com/oxygenforce/dsh-token-usage-badge.git"
   },
-  "homepage": "https://github.com/oxygenforce/dsh-token-clock",
+  "homepage": "https://github.com/oxygenforce/dsh-token-usage-badge",
   "bugs": {
-    "url": "https://github.com/oxygenforce/dsh-token-clock/issues"
+    "url": "https://github.com/oxygenforce/dsh-token-usage-badge/issues"
   },
   "engines": {
     "dsh": ">=0.2.1-rc.2"
