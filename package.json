@@ -8,6 +8,8 @@
     "dsh-plugin",
     "deepseek-harness",
     "token",
+    "token-usage",
+    "badge",
     "usage",
     "duration",
     "status",
